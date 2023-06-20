@@ -1,6 +1,6 @@
 describe('Alert Handling', ()=>{
 
-    it.skip('JS ALert',()=>{
+    it('JS ALert',()=>{
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
         cy.get("button[onclick='jsAlert()']").click()
         cy.on('window:alert',(t)=>{
@@ -40,7 +40,7 @@ describe('Alert Handling', ()=>{
        
         cy.get("#result").should('contain','You entered:')
     })
-    it.only('Authenticated ALert',()=>{
+    it('Authenticated ALert',()=>{
        
        // first approach
        // cy.visit('https://the-internet.herokuapp.com/basic_auth',{auth:{username:"admin",password:"admin"}})
